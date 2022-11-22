@@ -13,6 +13,7 @@ export const HeaderStyle = styled.header`
   right: 0;
 
   background: var(--white);
+
   box-shadow: 0px 4px 32px -12px rgba(0, 0, 0, 0.25);
 
   div {
@@ -52,11 +53,31 @@ export const HeaderStyle = styled.header`
       justify-content: space-between;
       align-items: center;
     }
+
+    button {
+      margin-left: 593px;
+    }
   }
 
   @media (min-width: 805px) {
     div {
       width: 805px;
+    }
+
+    button {
+      margin-left: 629px;
+    }
+  }
+
+  @media (min-width: 870px) {
+    div {
+      width: 795px;
+    }
+
+    button {
+      margin-left: 662px;
+
+      transition: 2s;
     }
   }
 `;
