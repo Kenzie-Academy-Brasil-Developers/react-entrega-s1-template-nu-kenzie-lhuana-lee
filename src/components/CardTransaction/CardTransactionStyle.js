@@ -12,6 +12,8 @@ export const animationCard = keyframes`
 export const CardTransactionStyle = styled.div`
   width: 100%;
 
+  margin-bottom: 30px;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -112,6 +114,8 @@ export const CardTransactionStyle = styled.div`
 
   @media (min-width: 435px) {
     width: 400px;
+
+    margin-bottom: 0;
 
     .list {
       width: 100%;
