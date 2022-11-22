@@ -7,12 +7,14 @@ const CardTransaction = ({
   setFiltered,
   transaction,
   setTransaction,
+  setBackgroundColor,
 }) => {
-  const removeCard = (index) => {
-    const remove = transaction.filter((item, i) => i !== index);
+  const removeCard = (id) => {
+    const remove = transaction.filter((item) => item.id !== id);
 
     setTransaction(remove);
     setFiltered(remove);
+    setBackgroundColor("Todos");
   };
 
   return (
@@ -33,7 +35,7 @@ const CardTransaction = ({
                   currency: "BRL",
                 })}
               </p>
-              <Button type={"button"} onClick={() => removeCard(index)}>
+              <Button type={"button"} onClick={() => removeCard(item.id)}>
                 <FaTrashAlt />
               </Button>
             </div>

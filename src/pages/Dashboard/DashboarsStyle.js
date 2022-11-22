@@ -13,8 +13,6 @@ export const DashboardStyle = styled.div`
   font-family: "Inter";
 
   @media (min-width: 768px) {
-    width: 54%;
-
     margin: 0 auto;
 
     gap: 20px;

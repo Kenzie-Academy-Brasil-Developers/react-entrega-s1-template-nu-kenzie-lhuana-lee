@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Button from "../Button/Button";
 import Select from "../Select/Select";
 import Total from "../Total/Total";
@@ -15,14 +16,18 @@ const Form = ({
   setFiltered,
   setBackgroundColor,
 }) => {
+  const [counter, setCounter] = useState(0);
+
   const addCard = (event) => {
     event.preventDefault();
+
     setTransaction([
       ...transaction,
       {
         description: description,
         value: type === "Entrada" ? value : -value,
         type: type,
+        id: counter,
       },
     ]);
     setFiltered([
@@ -31,12 +36,14 @@ const Form = ({
         description: description,
         value: type === "Entrada" ? value : -value,
         type: type,
+        id: counter,
       },
     ]);
     setDescription("");
     setValue("");
     setType("Entrada");
     setBackgroundColor("Todos");
+    setCounter(counter + 1);
   };
 
   return (

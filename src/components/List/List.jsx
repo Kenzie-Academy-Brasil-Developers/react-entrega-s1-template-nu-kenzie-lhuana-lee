@@ -28,6 +28,7 @@ const List = ({
           setTransaction={setTransaction}
           filtered={filtered}
           setFiltered={setFiltered}
+          setBackgroundColor={setBackgroundColor}
         />
       ) : (
         <Card />

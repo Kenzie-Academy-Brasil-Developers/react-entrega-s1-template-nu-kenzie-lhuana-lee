@@ -11,7 +11,7 @@ const FinancialSummary = ({
   const filteredCard = (type) => {
     if (type === "Todos") {
       setFiltered(transaction);
-      setBackgroundColor("Todos");
+      setBackgroundColor(type);
     } else {
       const filteredItem = transaction.filter((item) => item.type === type);
       setBackgroundColor(type);
